@@ -1,0 +1,10 @@
+.title {
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+.app-wrapper {
+    margin-top: 10%;
+    margin-left: 10%;
+}
