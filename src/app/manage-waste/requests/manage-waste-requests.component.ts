@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ManageWasteRequestsComponent implements OnInit {
 
   wasteType = "Wet waste";
-  pickupTime = "10:30 p.m.";
+  pickupdate = "22/01/2018";
+  pickupTime = "10:30 a.m.";
 
   constructor() { }
 

@@ -1,4 +1,4 @@
-<form [formGroup]="scheduleGarbagePickupForm" class="form">
+<form [formGroup]="scheduleGarbagePickupForm" class="form" (ngSubmit)="onSubmit()" #scheduleForm="ngForm">
   <div class="form-group">
     <label class="center-block" for="name">Name</label>
     <input type="text" class="form-control" id="name" formControlName="name">
@@ -10,7 +10,6 @@
   <div class="form-group">
       <label class="center-block" for="waste-type">Type of waste</label>
       <select class="form-control" id="waste-type" formControlName="pickupTime">
-        <option value="" disabled selected>Type of waste</option>
         <option>Wet waste</option>
         <option>Metal scrap</option>
         <option>Plastic</option>
@@ -20,8 +19,12 @@
       </select>
   </div>
   <div class="form-group">
+      <label class="center-block" for="pickup-date">Pickup Date</label>
+      <input type="date" class="form-control" id="pickup-date" formControlName="pickupDate">
+  </div>
+  <div class="form-group">
       <label class="center-block" for="pickup-time">Pickup Time</label>
       <input type="time" class="form-control" id="pickup-time" formControlName="pickupTime">
   </div>
-  <button type="submit" class="btn btn-default btn-primary">Schedule a pickup</button>
+  <input type="submit" class="btn btn-default btn-primary" value="Schedule a pickup">
 </form>

@@ -20,6 +20,9 @@ const routes: Routes = [
     path: 'manage-waste',
     component: ManageWasteComponent,
     children: [{
+      path: '',
+      component: ManageWasteScheduleComponent
+    }, {
       path: 'schedule',
       component: ManageWasteScheduleComponent
     }, {

@@ -23,4 +23,12 @@ router.get('/posts', (req, res) => {
     });
 });
 
+router.post('/schedule-pickup', (req, res) => {
+  console.log("Received post request /schedule-pickup");
+  console.log("query = " + JSON.stringify(req.query));
+  console.log("params = " + JSON.stringify(req.params));
+  res.send("good");
+
+});
+
 module.exports = router;

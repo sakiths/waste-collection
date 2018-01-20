@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
+import { RestService } from './rest.service';
 import { AppComponent } from './app.component';
 import { LinkBoxComponent } from './link-box/link-box/link-box.component';
 import { ManageWasteComponent } from './manage-waste/manage-waste.component';
@@ -24,11 +25,11 @@ import { ManageWasteRequestsComponent } from './manage-waste/requests/manage-was
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [RestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
